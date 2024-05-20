@@ -6,9 +6,9 @@ import localFont from "next/font/local";
 export const Switzer = localFont({
   src: [
     {
-      path: "./fonts/Switzer-Black.woff2",
+      path: "./fonts/Switzer-Extrabold.woff2",
       weight: "900",
-      style: "black",
+      style: "extrabold",
     },
     {
       path: "./fonts/Switzer-Bold.woff2",
