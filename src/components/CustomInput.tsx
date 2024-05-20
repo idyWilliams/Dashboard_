@@ -16,7 +16,7 @@ const InputWithButton: React.FC<InputWithButtonProps> = ({
   onButtonClick,
 }) => {
   return (
-    <div className="relative flex items-center w-3/5">
+    <div className="relative flex items-center lg:w-3/5">
       <span className="absolute left-6 text-black text-sm">looking for</span>
       <input
         type="text"

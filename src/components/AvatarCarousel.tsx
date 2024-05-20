@@ -29,11 +29,11 @@ const AvatarCarousel: React.FC<AvatarCarouselProps> = ({ images }) => {
   // }, [controls]);
 
   return (
-    <div className="relative w-12 h-12 ">
+    <div className="relative  w-8 lg:w-12 h-8 lg:h-12 ">
       {images.map((src, index) => (
         <motion.div
           key={index}
-          className="absolute top-0 left-0 w-12 h-12 rounded-full"
+          className="absolute top-0 left-0  w-8 lg:w-12 h-8 lg:h-12 rounded-full"
           style={{ zIndex: images.length - index }}
           // animate={controls}
         >

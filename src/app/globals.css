@@ -74,3 +74,7 @@
       @apply bg-background text-foreground;
     }
   }
+.break-after-space {
+  white-space: pre-wrap;
+  word-break: break-word;
+}

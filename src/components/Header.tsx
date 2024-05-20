@@ -22,8 +22,8 @@ export const TopLevelNavItem: React.FC<TopLevelNavItemProps> = ({
   className,
 }) => {
   const baseClasses =
-    "text-sm leading-5 text-white transition hover:text-zinc-900 ";
-  const combinedClasses = `${baseClasses} ${className || ""}`;
+    "text-sm leading-5  transition hover:text-zinc-900 ";
+  const combinedClasses = `${baseClasses} ${className || "text-white"}`;
 
   return (
     <li>
@@ -107,7 +107,7 @@ export const Header = forwardRef<
             </TopLevelNavItem>
           </ul>
         </nav>
-      
+
       </div>
     </motion.div>
   );
