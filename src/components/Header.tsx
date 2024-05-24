@@ -22,7 +22,7 @@ export const TopLevelNavItem: React.FC<TopLevelNavItemProps> = ({
   className,
 }) => {
   const baseClasses =
-    "text-sm leading-5  transition hover:text-zinc-900 ";
+    "text-sm leading-5  transition hover:text-zinc-900 cursor-pointer";
   const combinedClasses = `${baseClasses} ${className || "text-white"}`;
 
   return (
@@ -76,38 +76,37 @@ export const Header = forwardRef<
           <Logo className="h-10" />
         </Link>
       </div>
-      <div className="flex items-center justify-between gap-5 lg:hidden">
-        <MobileNavigation />
+      <div className="flex items-center justify-between gap-5 lg:hidden w-full">
         <Link href="/" aria-label="Home">
-          <Logo className="h-6" />
+          <Logo className="h-10" />
         </Link>
+        <MobileNavigation />
       </div>
-      <div className="flex items-center gap-5">
-        <nav className="hidden md:block">
+      <div className="hidden md:flex items-center gap-5">
+        <nav className="">
           <ul role="list" className="flex items-center gap-8">
             <TopLevelNavItem href="/">Find Work</TopLevelNavItem>
             <TopLevelNavItem href="#">Find Talent</TopLevelNavItem>
             <TopLevelNavItem href="#">Article</TopLevelNavItem>
             <TopLevelNavItem href="#">About Us</TopLevelNavItem>
             <TopLevelNavItem href="#">Contact Us</TopLevelNavItem>
-
           </ul>
         </nav>
         <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10" />
-        <div className="hidden min-[416px]:contents">
-          {/* <Button href="#">Sign in</Button> */}
-        </div>
+        <div className="hidden min-[416px]:contents"></div>
       </div>
-      <div className="flex items-center gap-5">
-        <nav className="hidden md:block">
+      <div className=" items-center gap-5 hidden md:flex">
+        <nav className="">
           <ul role="list" className="flex items-center gap-5">
             <TopLevelNavItem href="/">Log In</TopLevelNavItem>
-            <TopLevelNavItem className="bg-white text-[#202229] px-4 py-2 rounded-xl" href="#">
+            <TopLevelNavItem
+              className="bg-white text-[#202229] px-4 py-2 rounded-xl cursor-pointer"
+              href="#"
+            >
               Join Now
             </TopLevelNavItem>
           </ul>
         </nav>
-
       </div>
     </motion.div>
   );

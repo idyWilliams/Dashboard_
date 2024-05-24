@@ -22,7 +22,7 @@ const InputWithButton: React.FC<InputWithButtonProps> = ({
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full pr-10 pl-24 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-none  focus:border-transparent placeholder-gray-400 placeholder:text-sm"
+        className="w-full pr-10 pl-24 py-3 rounded-md border border-gray-300 focus:outline-none placeholder-gray-400 placeholder:text-sm"
         placeholder="design"
       />
       <button

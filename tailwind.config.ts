@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
@@ -72,6 +72,9 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      clipPath: {
+        "slant-top-right": "polygon(0 0, 100% 0, 100% 100%, 0 80%)",
+      },
       typography: {
         DEFAULT: {
           css: {
@@ -87,7 +90,16 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }: { addUtilities: (utilities: object) => void }) {
+      addUtilities({
+        ".clip-slant-top-right": {
+          "clip-path": "polygon(0 0, 100% 0, 100% 100%, 0 80%)",
+        },
+      });
+    },
+  ],
 } satisfies Config;
 
-export default config
+export default config;

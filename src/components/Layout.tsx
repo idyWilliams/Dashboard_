@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
+import Footer from "./footer";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   let pathname = usePathname();
@@ -15,8 +16,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       >
         <Header />
       </motion.header>
-      <div className="relative flex h-full flex-col  pt-14 ">
-        <main className="flex-auto">{children}</main>
+      <div className=" flex h-full flex-col  pt-14 ">
+        <main className="">{children}</main>
+        <Footer />
       </div>
     </div>
   );
