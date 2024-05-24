@@ -30,9 +30,9 @@ import { RiUserStarFill } from "react-icons/ri";
 import quote from "/public/quote.svg";
 import groove from "/public/groove1.png";
 import groove2 from "/public/groove.png";
-import J1 from "/public/j1.png";
-import j2 from "/public/j2.png";
-import j3 from "/public/j3.png";
+import one from "/public/1.png";
+import two from "/public/2.png";
+import three from "/public/3.png";
 
 export default function Home() {
   const avatars = [avatar1, avatar2, avatar3];
@@ -201,15 +201,15 @@ export default function Home() {
         className="w-full h-screen bg-cover md:bg-transparent flex flex-col justify-center items-center md:items-start px-8"
         // style={{ backgroundImage: `url(${rect.src})` }}
       >
-        <div className="text-[#202229] text-2xl text-center md:text-left">
+        <div className="text-[#202229] text-2xl  md:text-left">
           <div className="text-[#202229] text-xl lg:text-5xl font-extrabold space-y-2">
-            <span className="flex gap-3">
+            <span className="flex gap-3 ">
               <span>
                 How we ensure you’re <br /> in good hands.
               </span>
             </span>
           </div>
-          <p className="text-[#202229] text-sm lg:text-base font-light mt-6">
+          <p className="text-[#202229] text-sm lg:text-base font-light mt-6 text-center md:text-start">
             With our comprehensive screening process, we hand-pick highly <br />{" "}
             skilled candidates so you can onboard them in a matter of days.
           </p>
@@ -219,31 +219,120 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="w-full">
         {/* <div className="text-[#202229] text-xl lg:text-5xl font-extrabold text-center  space-y-2">
           <span className="flex  gap-3 ">
             <span>Start your journey today.</span>
           </span>
         </div> */}
-        <div>
-          <div
-            className="h-96 w-full bg-cover"
-            style={{ backgroundImage: `url(${J1.src})` }}
-          ></div>
-          <Image
-            src={j2}
-            alt="quote"
-            className="w-100 h-15 mt-4"
-            // width={100}
-            // height={100}
-          />
-          <Image
-            src={j3}
-            alt="quote"
-            className="w-100 h-15 mt-4"
-            // width={100}
-            // height={100}
-          />
+        <div className="space-y-8 px-8">
+          <div className="h-96 w-full bg-cover bg-[#EDEFFF] -skew-y-3 p-8">
+            <div className="">
+              <span className="flex  gap-3 ">
+                <Image
+                  src={one}
+                  alt="quote"
+                  className="w-16 h-[80px]"
+                  // width={40}
+                  // height={40}
+                />
+                <div className="skew-y-3 mt-3 space-y-8">
+                  <span className="text-[#202229] text-xl lg:text-3xl font-extrabold  space-y-2">
+                    Find your next star <br /> performer.
+                  </span>
+                  <p className="text-[#202229] text-sm lg:text-base font-light mt-6 text-start">
+                    Explore the vast Zwilt marketplace to find the candidate{" "}
+                    <br />
+                    that meets your needs.
+                  </p>
+                  <div className="flex items-center gap-3 ">
+                    <button className="bg-[#000] p-4 border rounded-2xl">
+                      <Image
+                        src={vectorLIght}
+                        alt="vector"
+                        width={40}
+                        height={40}
+                        className="h-4 w-6"
+                      />
+                    </button>
+                    <span>Join Now</span>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div className="h-96 w-full bg-cover bg-[#FFF7E0] -skew-y-3 p-8">
+            <div className="">
+              <span className="flex  gap-3 ">
+                <Image
+                  src={two}
+                  alt="quote"
+                  className="w-16 h-[80px]"
+                  // width={40}
+                  // height={40}
+                />
+
+                <div className="skew-y-3 mt-3 space-y-8">
+                  <span className="text-[#202229] text-xl lg:text-3xl font-extrabold  space-y-2">
+                    Evaluate to your <br />
+                    heart’s content.
+                  </span>
+                  <p className="text-[#202229] text-sm lg:text-base font-light mt-6 text-start">
+                    Assess the candidate through work history, transparent
+                    <br />
+                    tests and video interviews.
+                  </p>
+                  <div className="flex items-center gap-3 ">
+                    <button className="bg-[#000] p-4 border rounded-2xl">
+                      <Image
+                        src={vectorLIght}
+                        alt="vector"
+                        width={40}
+                        height={40}
+                        className="h-4 w-6"
+                      />
+                    </button>
+                    <span>Join Now</span>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div className="h-96 w-full bg-cover bg-[#F3F3F3] -skew-y-3 p-8">
+            <div className="">
+              <span className="flex  gap-3 ">
+                <Image
+                  src={three}
+                  alt="quote"
+                  className="w-16 h-[80px]"
+                  // width={40}
+                  // height={40}
+                />
+                <div className="skew-y-3 mt-3 space-y-8">
+                  <span className="text-[#202229] text-xl lg:text-3xl font-extrabold  space-y-2">
+                    Start building
+                    <br /> your team.
+                  </span>
+                  <p className="text-[#202229] text-sm lg:text-base font-light mt-6 text-start">
+                    Onboard your candidate right away and start <br />
+                    creating the next big thing.
+                  </p>
+                  <div className="flex items-center gap-3 ">
+                    <button className="bg-[#000] p-4 border rounded-2xl">
+                      <Image
+                        src={vectorLIght}
+                        alt="vector"
+                        width={40}
+                        height={40}
+                        className="h-4 w-6"
+                      />
+                    </button>
+                    <span>Join Now</span>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
         </div>
       </section>
     </main>

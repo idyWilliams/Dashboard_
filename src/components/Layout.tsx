@@ -18,7 +18,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </motion.header>
       <div className=" flex h-full flex-col  pt-14 ">
         <main className="">{children}</main>
-        <Footer />
+        <div className="">
+          <Footer />
+        </div>
       </div>
     </div>
   );
